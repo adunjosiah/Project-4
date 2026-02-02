@@ -114,7 +114,7 @@
                         <td class="visible-with-data" id="Parcel Name">' + (feature.properties['Parcel Nam'] !== null ? autolinker.link(String(feature.properties['Parcel Nam']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row" style="padding-right: 10px;"(Hectares)>Area Size</th>\
+                        <th scope="row" style="padding-right: 10px;">Area Size (Hectares)</th>\
                         <td class="visible-with-data" id="Area Size">' + (feature.properties['Area Size'] !== null ? autolinker.link(String(feature.properties['Area Size']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
