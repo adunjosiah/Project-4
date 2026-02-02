@@ -44,7 +44,7 @@
             zoomControl:false, maxZoom:28, minZoom:1
         }).fitBounds([[6.468244897013494,3.548672215961548],[6.470451764683676,3.5527843128232175]]);
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank"></a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org"></a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         // remove popup's row if "visible-with-data"
         function removeEmptyRowsFromPopupContent(content, feature) {
@@ -86,7 +86,7 @@
         var layer_GoogleSatellite_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
             pane: 'pane_GoogleSatellite_0',
             opacity: 1.0,
-            attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html"></a>',
             minZoom: 1,
             maxZoom: 28,
             minNativeZoom: 0,
@@ -99,7 +99,7 @@
         var layer_GoogleLabels_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}', {
             pane: 'pane_GoogleLabels_1',
             opacity: 1.0,
-            attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            attribution: '<a href="https://www.google.at/permissions/geoguidelines/attr-guide.html"></a>',
             minZoom: 1,
             maxZoom: 28,
             minNativeZoom: 0,
@@ -110,11 +110,11 @@
         function pop_Boundary_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Parcel Nam</th>\
-                        <td class="visible-with-data" id="Parcel Nam">' + (feature.properties['Parcel Nam'] !== null ? autolinker.link(String(feature.properties['Parcel Nam']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <th scope="row" style="padding-right: 10px;">Parcel Nam</th>\
+                        <td class="visible-with-data" id="Parcel Name">' + (feature.properties['Parcel Nam'] !== null ? autolinker.link(String(feature.properties['Parcel Nam']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <th scope="row">Area Size</th>\
+                        <th scope="row" style="padding-right: 10px;"(Hectares)>Area Size</th>\
                         <td class="visible-with-data" id="Area Size">' + (feature.properties['Area Size'] !== null ? autolinker.link(String(feature.properties['Area Size']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
